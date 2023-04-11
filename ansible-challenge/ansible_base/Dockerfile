@@ -21,6 +21,7 @@ RUN echo "ansible_controller ALL=(ALL:ALL) NOPASSWD: ALL" |  EDITOR="tee -a"  vi
 
 
 RUN mkdir -p /home/ansible_controller/.ssh
+RUN chmod 777 /home/ansible_controller
 
 
 CMD ["/bin/bash", "/home/ansible_controller/startup.sh"]
