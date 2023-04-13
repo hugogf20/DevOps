@@ -1,0 +1,10 @@
+- hosts: localhost
+  connection: local
+  vars_files:
+    - vars/config_values.yaml
+
+  gather_facts: no
+
+  tasks:
+    - name: Set correct project in gcloud config
+      shell: "gcloud config set project {{ google_project_name }}"
